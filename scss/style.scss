@@ -1,24 +1,107 @@
 @import "normalize";
 @import "boilerplate";
 
+/*-------Variables/mixin-------*/
+
+$bgWhite: rgba(231,231,231,1);
+$txtGrey: rgba(197,197,197,1);
+$txtWhite: rgba(234,234,234,1);
+
+@mixin gradient-black (){
+background: rgb(76,76,76); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 25%, rgba(102,102,102,1) 51%, rgba(71,71,71,1) 76%, rgba(44,44,44,1) 100%, rgba(28,28,28,1) 100%, rgba(43,43,43,1) 100%, rgba(17,17,17,1) 100%, rgba(0,0,0,1) 100%, rgba(19,19,19,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(76,76,76,1)), color-stop(25%,rgba(89,89,89,1)), color-stop(51%,rgba(102,102,102,1)), color-stop(76%,rgba(71,71,71,1)), color-stop(100%,rgba(44,44,44,1)), color-stop(100%,rgba(28,28,28,1)), color-stop(100%,rgba(43,43,43,1)), color-stop(100%,rgba(17,17,17,1)), color-stop(100%,rgba(0,0,0,1)), color-stop(100%,rgba(19,19,19,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 25%,rgba(102,102,102,1) 51%,rgba(71,71,71,1) 76%,rgba(44,44,44,1) 100%,rgba(28,28,28,1) 100%,rgba(43,43,43,1) 100%,rgba(17,17,17,1) 100%,rgba(0,0,0,1) 100%,rgba(19,19,19,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 25%,rgba(102,102,102,1) 51%,rgba(71,71,71,1) 76%,rgba(44,44,44,1) 100%,rgba(28,28,28,1) 100%,rgba(43,43,43,1) 100%,rgba(17,17,17,1) 100%,rgba(0,0,0,1) 100%,rgba(19,19,19,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 25%,rgba(102,102,102,1) 51%,rgba(71,71,71,1) 76%,rgba(44,44,44,1) 100%,rgba(28,28,28,1) 100%,rgba(43,43,43,1) 100%,rgba(17,17,17,1) 100%,rgba(0,0,0,1) 100%,rgba(19,19,19,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 25%,rgba(102,102,102,1) 51%,rgba(71,71,71,1) 76%,rgba(44,44,44,1) 100%,rgba(28,28,28,1) 100%,rgba(43,43,43,1) 100%,rgba(17,17,17,1) 100%,rgba(0,0,0,1) 100%,rgba(19,19,19,1) 100%); /* W3C */
+}
+
+@mixin gradient-white (){
+background: -moz-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.5)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%); /* W3C */
+}
+
+/*-------Début-------*/
+
 html {
-	background-color: rgba(231,231,231,1);
+	background-color: $bgWhite;
 }
 
 body {
-	margin: 0 auto;
+	margin: 3em auto 0 auto;
 	width: 60em;
 	background-color: red;
 }
 
+/*-------Header-------*/
+
 header{
 	width: 100%;
-	background-color: black;
+	@include gradient-black;
 	position: fixed;
 	left: 0;
 	top: 0;
+	color: $txtGrey;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+
+header h2{
+	display: none;
+}
+
+header h1{
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 1.25em;
+	display: inline-block;
+	margin: 0 0 0 1em;
+
+	span{
+		font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+		font-size: 0.75em;
+		margin-left: 1em;
+		font-weight: bold;
+		color: darken($txtGrey, 12.5%);
+	}
+
+	a{
+		padding: 0.5em;
+	}
+}
+
+header a{
+	color: $txtGrey;
+	text-decoration: none;
+	display: inline-block;
+	transition: background 500ms ease;
+}
+
+header ul{
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 0 1em 0 0;
+	padding: 0;
 }
 
 header ul li a{
 	display: inline-block;
+	font-size: 1.25em;
+	padding: 0.5em 0.75em;
+}
+
+header ul li{
+	display: inline-block;
+}
+
+header ul li a:hover{
+	@include gradient-white;
+	transition: background 500ms ease;
+	z-index: 99;
+	color: $txtWhite;
 }
