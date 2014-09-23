@@ -799,7 +799,7 @@ section#about {
   top: 5em;
 }
 
-#about p span a {
+span.button a {
   background: #f3c5bd;
   /* Old browsers */
   background: -moz-linear-gradient(top, #ea2803 0%, #ff6600 50%, #c72200 100%);
@@ -824,7 +824,7 @@ section#about {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-#about p span a:hover {
+span.button a:hover {
   background: #f3c5bd;
   /* Old browsers */
   background: -moz-linear-gradient(top, #ea6100 0%, #fc9b00 50%, #ea6100 100%);
@@ -841,6 +841,21 @@ section#about {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f3c5bd', endColorstr='#ea6100',GradientType=0 );
   /* IE6-9 */
+}
+
+/*------------Section #travaux------------*/
+section#travaux {
+  border-top: 1px solid #c5c5c5;
+}
+
+#travaux article {
+  background-color: #313131;
+  color: #eaeaea;
+}
+
+#travaux article a {
+  background-color: red;
+  opacity: 0.5;
 }
 
 /*------------Footer------------*/

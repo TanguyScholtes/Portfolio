@@ -4,10 +4,12 @@
 /*------------Variables/mixin------------*/
 
 $bgWhite: rgba(231,231,231,1);
+$bgRed: rgba(220,65,35,1);
+
 $txtGrey: rgba(197,197,197,1);
 $txtWhite: rgba(234,234,234,1);
 $txtBlack: rgba(49,49,49,1);
-$bgRed: rgba(220,65,35,1);
+
 
 @mixin gradient-black (){
 	background: rgb(76,76,76); /* Old browsers */
@@ -173,7 +175,7 @@ section#about{
 	top: 5em;
 }
 
-#about p span a{
+span.button a{
 	@include gradient-red;
 	text-decoration: none;
 	color: white;
@@ -183,8 +185,25 @@ section#about{
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
 
-#about p span a:hover{
+span.button a:hover{
 	@include gradient-orange;
+}
+
+/*------------Section #travaux------------*/
+
+section#travaux{
+	border-top: 1px solid $txtGrey;
+}
+
+#travaux article{
+	background-color: $txtBlack;
+	color: $txtWhite;
+}
+
+#travaux article a{
+	//padding: 0.3125em 3em 3em 0.5em;
+	background-color: red;
+	opacity: 0.5;
 }
 
 /*------------Footer------------*/
