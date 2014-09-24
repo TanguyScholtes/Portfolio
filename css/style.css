@@ -842,6 +842,7 @@ span.button a:hover {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f3c5bd', endColorstr='#ea6100',GradientType=0 );
   /* IE6-9 */
+  transform: scale(1.1, 1.1);
 }
 
 /*------------Section #travaux------------*/

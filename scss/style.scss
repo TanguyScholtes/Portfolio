@@ -188,6 +188,7 @@ span.button a{
 
 span.button a:hover{
 	@include gradient-orange;
+	transform: scale(1.1, 1.1);
 }
 
 /*------------Section #travaux------------*/
