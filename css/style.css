@@ -867,29 +867,35 @@ section#travaux {
 }
 
 #travaux article.travail1 a {
-  background-image: url("img/LoLActu.png");
+  background-image: url("../img/LoLActu.png");
+  background-position: 50% 30%;
 }
 
 #travaux article.travail2 a {
-  background-image: url("img/HeroesOfTheStorm.png");
+  background-image: url("../img/HeroesOfTheStorm.png");
+  background-position: 30% 18.5%;
 }
 
 #travaux article.travail3 a {
-  background-image: url("img/ConfrerieDesTraducteursSkyrim.png");
+  background-image: url("../img/ConfrerieDesTraducteursSkyrim.png");
+  background-position: 50% 5%;
 }
 
 #travaux article.travail4 a {
-  background-image: url("img/BiblioPHP.png");
+  background-image: url("../img/BiblioPHP.png");
+  background-position: 50% 7.5%;
   margin-bottom: 2.5em;
 }
 
 #travaux article a:hover {
   transform: scale(1.05, 1.05);
+  background-image: none;
   background-color: #dc4123;
   color: white;
   transition: color 1000ms ease;
-  transition: background 1000ms ease;
+  transition: background-color 500ms ease;
   transition: transform 500ms ease;
+  transition: background-image 500ms ease;
 }
 
 /*------------Footer------------*/
