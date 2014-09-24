@@ -181,8 +181,9 @@ span.button a{
 	color: white;
 	font-weight: bold;
 	padding: 0.3125em 0.5em;
-	border: 1px outset #ff6600;
+	border: 1px solid #ff6600;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	border-radius: 0.5em;
 }
 
 span.button a:hover{
@@ -193,27 +194,59 @@ span.button a:hover{
 
 section#travaux{
 	border-top: 1px solid $txtGrey;
+	margin-bottom: 3em;
 }
 
 #travaux article{
 	background-color: $txtBlack;
-	color: $txtWhite;
+	color: white;
+	border-radius: 1em;
 }
 
 #travaux article a{
-	//padding: 0.3125em 3em 3em 0.5em;
-	background-color: red;
-	opacity: 0.5;
+	text-decoration: none;
+	color: rgba(255,255,255,0); 	//Blanc transparent
+	padding: 0.5em 0.5em 1em 0.5em;
+	display: block;
+	border-radius: 1em;
+	margin-bottom: 1.5em;
+	border: 2px solid $txtBlack;
+}
+
+#travaux article.travail1 a{
+	background-image: url("img/LoLActu.png");
+}
+
+#travaux article.travail2 a{
+	background-image: url("img/HeroesOfTheStorm.png");
+}
+
+#travaux article.travail3 a{
+	background-image: url("img/ConfrerieDesTraducteursSkyrim.png");
+}
+
+#travaux article.travail4 a{
+	background-image: url("img/BiblioPHP.png");
+	margin-bottom: 2.5em;
+}
+
+#travaux article a:hover{
+	transform: scale(1.05,1.05);
+	background-color: $bgRed;
+	color: rgba(255,255,255,1); 	//Blanc visible
+	transition: color 1000ms ease;
+	transition: background 1000ms ease;
+	transition: transform 500ms ease;
 }
 
 /*------------Footer------------*/
 
 footer{
-	@include gradient-black;
+	background-color: $txtBlack;
 	color: $txtGrey;
-	//width: 100%;
-	//position: absolute;
-	//bottom: 0px;
-	//left: 0;
+	width: 100%;
+	position: absolute;
+	bottom: -43em;
+	left: 0;
 }
 
