@@ -1,7 +1,7 @@
 @import "normalize";
 @import "boilerplate";
 
-/*------------Variables/mixin------------*/
+/*-----------------Variables/mixin-----------------*/
 
 $bgWhite: rgba(231,231,231,1);
 $bgRed: rgba(220,65,35,1);
@@ -53,7 +53,7 @@ $txtBlack: rgba(49,49,49,1);
 
 }
 
-/*------------Général------------*/
+/*-----------------Général-----------------*/
 
 html {
 	background-color: $bgWhite;
@@ -68,7 +68,7 @@ body {
 	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 }
 
-/*------------Header------------*/
+/*-----------------Header-----------------*/
 
 header{
 	width: 100%;
@@ -137,7 +137,7 @@ header ul li a:hover{
 	color: $txtWhite;
 }
 
-/*------------Section #about------------*/
+/*-----------------Section #about-----------------*/
 
 section#about{
 	position: relative;
@@ -191,7 +191,7 @@ span.button a:hover{
 	transform: scale(1.1, 1.1);
 }
 
-/*------------Section #travaux------------*/
+/*-----------------Section #travaux-----------------*/
 
 section#travaux{
 	border-top: 1px solid $txtGrey;
@@ -246,7 +246,7 @@ section#travaux{
 	transition: background-image 500ms ease;
 }
 
-/*------------Footer------------*/
+/*------------------Footer-----------------*/
 
 footer{
 	background-color: $txtBlack;

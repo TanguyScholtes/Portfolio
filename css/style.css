@@ -660,8 +660,8 @@ textarea {
     page-break-after: avoid;
   }
 }
-/*------------Variables/mixin------------*/
-/*------------Général------------*/
+/*-----------------Variables/mixin-----------------*/
+/*-----------------Général-----------------*/
 html {
   background-color: #e7e7e7;
 }
@@ -674,7 +674,7 @@ body {
   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 }
 
-/*------------Header------------*/
+/*-----------------Header-----------------*/
 header {
   width: 100%;
   background: #4c4c4c;
@@ -764,7 +764,7 @@ header ul li a:hover {
   color: #eaeaea;
 }
 
-/*------------Section #about------------*/
+/*-----------------Section #about-----------------*/
 section#about {
   position: relative;
   padding-bottom: 1em;
@@ -845,7 +845,7 @@ span.button a:hover {
   transform: scale(1.1, 1.1);
 }
 
-/*------------Section #travaux------------*/
+/*-----------------Section #travaux-----------------*/
 section#travaux {
   border-top: 1px solid #c5c5c5;
   margin-bottom: 3em;
@@ -899,7 +899,7 @@ section#travaux {
   transition: background-image 500ms ease;
 }
 
-/*------------Footer------------*/
+/*------------------Footer-----------------*/
 footer {
   background-color: #313131;
   color: #c5c5c5;
